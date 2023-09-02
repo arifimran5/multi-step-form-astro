@@ -1,0 +1,69 @@
+---
+import Layout from '../../layouts/Layout.astro'
+---
+
+<Layout title='Register - final'>
+  <main class='w-[500px] md:w-[575px]'>
+    <form class='flex flex-col gap-[28px]'>
+      <div class='flex w-full gap-10'>
+        <div class='flex w-full flex-col gap-[14px]'>
+          <label class='text-lg' for='city'>City</label>
+          <input
+            class='h-[75px] w-full ring-4 ring-border_color rounded-lg bg-background_secondary px-9 placeholder:text-lg placeholder:text-text_secondary'
+            type='text'
+            name='city'
+            id='city'
+            placeholder='Electricity'
+          />
+        </div>
+        <div class='flex w-full flex-col gap-[14px]'>
+          <label class='text-lg' for='country'>Country</label>
+          <input
+            class='h-[75px] w-full ring-4 ring-border_color rounded-lg bg-background_secondary px-9 placeholder:text-lg placeholder:text-text_secondary'
+            type='text'
+            name='country'
+            id='country'
+            placeholder='Krakozhia'
+          />
+        </div>
+      </div>
+      <div class='flex flex-col gap-[14px]'>
+        <label class='text-lg' for='bio'>Bio</label>
+        <textarea
+          class='h-[220px] py-4 ring-4 ring-border_color rounded-lg bg-background_secondary px-9 placeholder:text-lg placeholder:text-text_secondary'
+          name='bio'
+          id='bio'
+          placeholder='Write something about you ...'></textarea>
+      </div>
+      <div class='flex items-center mt-[42px]'>
+        <label class='relative inline-flex items-center cursor-pointer'>
+          <input type='checkbox' value='' class='sr-only peer' />
+          <div
+            class="w-11 h-6 bg-background_secondary ring-2 ring-border_color peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-border_accent rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-border_color after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-text_secondary peer-checked:after:bg-lime-400 after:border-border_color after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-accent"
+          >
+          </div>
+        </label>
+        <p class='ml-3'>
+          I agree to <a class='text-[#62BAAC]' href='#'>Terms and Conditions*</a
+          >
+        </p>
+      </div>
+
+      <div class='mt-[42px] flex w-full gap-10'>
+        <a href='/register/one' class='w-full'>
+          <button
+            class='h-[75px] text_shadow w-full bg-gradient-to-b from-background_secondary/80 text-xl ring-2 ring-border_color rounded-lg to-background_secondary active:from-background_secondary active:to-background_secondary/80'
+            type='button'>Back</button
+          >
+        </a>
+        <button
+          transition:name='primary_btn'
+          class='h-[75px] text_shadow w-full
+          bg-gradient-to-b from-accent/80 text-xl ring-2 ring-border_accent
+          rounded-lg to-accent active:from-accent active:to-accent/80'
+          type='button'>Submit</button
+        >
+      </div>
+    </form>
+  </main>
+</Layout>

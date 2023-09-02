@@ -1,0 +1,74 @@
+---
+import Layout from '../../layouts/Layout.astro'
+---
+
+<Layout title='Register - initial'>
+  <main class='w-[575px]'>
+    <form class='flex flex-col gap-[28px]'>
+      <div class='flex w-full gap-10'>
+        <div class='flex w-full flex-col gap-[14px]'>
+          <label class='text-lg' for='first_name'>First Name</label>
+          <input
+            class='h-[75px] w-full ring-4 ring-border_color rounded-lg bg-background_secondary px-9 placeholder:text-lg placeholder:text-text_secondary'
+            type='text'
+            name='first_name'
+            id='first_name'
+            placeholder='Victor'
+          />
+        </div>
+        <div class='flex w-full flex-col gap-[14px]'>
+          <label class='text-lg' for='last_name'>Last Name</label>
+          <input
+            class='h-[75px] w-full ring-4 ring-border_color rounded-lg bg-background_secondary px-9 placeholder:text-lg placeholder:text-text_secondary'
+            type='text'
+            name='last_name'
+            id='last_name'
+            placeholder='Navorski'
+          />
+        </div>
+      </div>
+      <div class='flex flex-col gap-[14px]'>
+        <label class='text-lg' for='email'>Email</label>
+        <input
+          class='h-[75px] ring-4 ring-border_color rounded-lg bg-background_secondary px-9 placeholder:text-lg placeholder:text-text_secondary'
+          type='email'
+          name='email'
+          id='email'
+          placeholder='victor@terminal.com'
+        />
+      </div>
+      <div class='flex flex-col gap-[14px]'>
+        <label class='text-lg' for='password'>Password</label>
+        <input
+          class='h-[75px] ring-4 ring-border_color rounded-lg bg-background_secondary px-9 placeholder:text-lg placeholder:text-text_secondary'
+          type='password'
+          name='password'
+          id='password'
+          placeholder='******'
+        />
+      </div>
+      <div class='flex flex-col gap-[14px]'>
+        <label class='text-lg' for='confirm_password'>Confirm Password</label>
+        <input
+          class='h-[75px] ring-4 ring-border_color rounded-lg bg-background_secondary px-9 placeholder:text-lg placeholder:text-text_secondary'
+          type='password'
+          name='confirm_password'
+          id='confirm_password'
+          placeholder='******'
+        />
+      </div>
+      <div
+        transition:animate='none'
+        transition:name='primary_btn'
+        class='mt-[42px]'
+      >
+        <a href='/register/two'>
+          <button
+            class='h-[75px] text_shadow w-full bg-gradient-to-b from-accent/80 text-xl ring-2 ring-border_accent rounded-lg to-accent active:from-accent active:to-accent/80'
+            type='button'>Next</button
+          >
+        </a>
+      </div>
+    </form>
+  </main>
+</Layout>
